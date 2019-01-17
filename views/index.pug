@@ -1,0 +1,20 @@
+html
+  head
+    title CopperBot
+  body
+    h1= 'Таблица с заказами'
+    table
+      if data[0]
+        each item in data
+          tr(class='list-item')
+            td(class='id')= item.id
+            td(class='message')= item.message
+            td(class='name')= item.userName
+            td(class='complete')
+              button(class='complete-button' item-id= item.id)= 'Сыграть'
+            unless item.approved
+              td(class='approve')
+                button(class='approve-button' item-id= item.id)= 'Одобрить'
+            td(class='decline')
+              button(class='decline-button' item-id= item.id)= 'Отклонить'
+    script(src='scripts/main.js')

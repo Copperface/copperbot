@@ -1,0 +1,14 @@
+{
+    "options": {
+        "debug": true
+    },
+    "connection": {
+        "cluster": "aws",
+        "reconnect": true
+    },
+    "identity": {
+        "username": "bot username",
+        "password": "bot auth token"
+    },
+    "channels": ["channels name"]
+}
