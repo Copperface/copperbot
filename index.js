@@ -124,13 +124,6 @@ client.on("connected", function (adress, port) {
 client.on("chat", function (channel, userstate, message, self) {
     if (self) return;
 
-    if (userstate.username === 'mirrobot') {
-        if (message.indexOf('дал верный ответ') !== -1) {
-            let splitMSG = message.split(' ');
-            client.say(options.channels[0], '@' + splitMSG[0] + ' гуглер');
-        }
-    }
-
     let splitMSG = message.replace(/(^\s*)|(\s*)$/g, '').split(' ');
 
     switch (splitMSG[0].toLowerCase()) {
